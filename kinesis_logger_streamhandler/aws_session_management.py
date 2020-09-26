@@ -57,7 +57,7 @@ class AwsSessionManagement:
                         response = self.client.assume_role(
                             DurationSeconds=3600,
                             RoleArn=self.role_arn,
-                            RoleSessionName='DisruptionLambda',
+                            RoleSessionName=self.role_session_name,
                         )
                     self.aws_access_key_id = response["Credentials"]["AccessKeyId"]
                     self.aws_secret_access_key = response["Credentials"]["SecretAccessKey"]
