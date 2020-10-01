@@ -3,7 +3,8 @@ import logging
 import datetime
 import json
 from datetime import datetime, timezone
-from kinesis_logger_streamhandler.aws_session_management import AwsSessionManagement
+
+from aws_session_management.aws_session_management import AwsSessionManagement
 
 logger = logging.getLogger(__name__)
 
