@@ -28,7 +28,7 @@ class KinesisDataStreamHandler(logging.StreamHandler):
                 "component": self.__component,
                 "action": self.__action,
                 "syslog_severity": record.levelname,
-                "message": record.msg,
+                "message": record.getMessage(),
                 "subsystem": self.__subsystem,
                 "project": self.__project_name,
                 "environment": self.__env,
