@@ -32,8 +32,10 @@ class KinesisDataStreamHandler(logging.StreamHandler):
                 "subsystem": self.__subsystem,
                 "project": self.__project_name,
                 "environment": self.__env,
-                "version": self.__version,
+                "version": self.__version
             }
+        if hasattr(record, 'requestId'):
+            data['requestId'] = record.requestId
         return json.dumps(data)
 
     def emit(self, record):
