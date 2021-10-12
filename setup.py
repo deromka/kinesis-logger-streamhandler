@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="kinesis-logger-streamhandler",
-    version="0.0.7",
+    version="0.0.8",
     author="Roman Dembitsky",
     author_email="romande@gmail.com",
     description="AWS Kinesis logger streamhandler with AWS Session Management",
